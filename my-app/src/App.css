@@ -9,6 +9,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Questrial', sans-serif;
 }
 .home-header {
   position: fixed;
@@ -66,4 +67,43 @@ p{
 .about-us{
   width: 200px;
   cursor: pointer;
+}
+
+.login-submit{
+
+  margin-top: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.login-input{
+  
+  box-shadow: inset #abacaf 0 0 0 2px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.767);
+  appearance: none;
+  position: relative;
+  border-radius: 3px;
+  line-height: 1.2;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  height: 25px;
+  transition: all .2s ease;
+  
+
+}
+
+.login-input:hover{
+  box-shadow: 0 0 0 0 #fff inset, #3a793a 0 0 0 2px;
+}
+.login-input:focus{
+  background: #fff;
+  outline: 0;
+  box-shadow: 0 0 0 0 #fff inset, #3a793a 0 0 0 3px;
+}
+
+.aboutus-text{
+  margin-left: 20%;
+  margin-right: 20%;
+
 }
