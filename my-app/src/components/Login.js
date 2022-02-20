@@ -1,22 +1,55 @@
 import logo from '../logo.svg';
 import '../App.css';
-
+import { useState } from 'react';
 import React from 'react'
 import {  Link } from "react-router-dom";
+import Form from "./Form";
+import Navbar from './Navbar';
 
-export default function Login() {
+ function Login() {
+
+  const [user, setUser] = useState({name: ""});
+  const [error, setError] = useState("");
+
+  const Login =  details => {
+    console.log(details);
+
+    setUser({
+      name: details.name
+    })
+  }
+
+  const Logout = () => {
+    setUser({name: ""});
+    console.log("Logout");
+  }
+
+
   return (
     <div className="Home">
-      <header className="home-header">
-        <div id="navbar"></div>
-        <img src={logo} className="sesh-logo" alt="logo" />
-      </header>
-      <h1>Login</h1>
+      {(user.name !== "") ? (
+         <div>
+          <Navbar/>
       <br/>
-         
-      <Link to="/" > <button className="btn about-us">Home</button> </Link>         
+      <h1>Welcome, <span>{user.name}</span> </h1> 
+      <button className='btn login-submit' onClick={Logout}> Logout </button>
+         </div>
+      ) 
+    :
+    (
+      <div>
+      <Navbar/>
+ <br/>
+ <Form Login={Login} error={error} />
+ <br/>
+ <Link to="/" > <button className="btn about-us">Home</button> </Link>   
+    </div>
+    )}
+            
     
     </div>
   )
 }
+
+export default Login;
 
