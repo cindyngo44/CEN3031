@@ -1,10 +1,8 @@
-import logo from '../logo.svg';
 import '../App.css';
 import { useState } from 'react';
 import React from 'react'
 import {  Link } from "react-router-dom";
 import Form from "./Form";
-import Navbar from './Navbar';
 
  function Login() {
 
@@ -29,7 +27,6 @@ import Navbar from './Navbar';
     <div className="Home">
       {(user.name !== "") ? (
          <div>
-          <Navbar/>
       <br/>
       <h1>Welcome, <span>{user.name}</span> </h1> 
       <button className='btn login-submit' onClick={Logout}> Logout </button>
@@ -38,7 +35,6 @@ import Navbar from './Navbar';
     :
     (
       <div>
-      <Navbar/>
  <br/>
  <Form Login={Login} error={error} />
  <br/>
