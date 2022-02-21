@@ -20,12 +20,12 @@ function Form({ Login, error }) {
             <label> Username: </label>
             <input className="login-input" type= "text" name="name" id = "name" onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
             </div>
-
+            <br/>
             <div className = "form-group"> 
             <label> Password: </label>
             <input className="login-input" type= "password" name="password" id = "password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
             </div>
-
+            <br/>
             <input className = "btn login-submit" type="submit" value = "Login"/>
 
         </div>

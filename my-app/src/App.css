@@ -1,15 +1,21 @@
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('./components/font/GTWalsheimPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .Home {
   background: linear-gradient(#7BD860, #7DD48E, #80D0C7);
   min-height: 100vh;
   text-align: center;
-  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  font-family: 'Questrial', sans-serif;
+  font-family: 'GT Walsheim Pro', sans-serif;
 }
 .home-header {
   position: fixed;
@@ -23,13 +29,14 @@
   position: absolute;
   left: 2.33%;
   right: 90.87%;
-  top: 5px;
+  top: 4px;
   bottom: 2.55%;
   cursor: pointer;
   z-index: 3;
-  width: 90px;
+  height: 60px;
   cursor: pointer;
 }
+
 #navbar{
   position: absolute;
   left: 0%;
@@ -60,6 +67,12 @@ p{
   margin: 0px;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
+
+.btn:hover{
+  color:#80D0C7;
+  transform: scale(1.03);
+}
+
 .login-register{
   width: 200px;
   cursor: pointer;
@@ -94,16 +107,21 @@ p{
 }
 
 .login-input:hover{
-  box-shadow: 0 0 0 0 #fff inset, #3a793a 0 0 0 2px;
+  box-shadow: 0 0 0 0 #fff inset, #80D0C7 0 0 0 2px;
 }
 .login-input:focus{
   background: #fff;
   outline: 0;
-  box-shadow: 0 0 0 0 #fff inset, #3a793a 0 0 0 3px;
+  box-shadow: 0 0 0 0 #fff inset, #4b4b4b 0 0 0 3px;
 }
 
 .aboutus-text{
   margin-left: 20%;
   margin-right: 20%;
+
+}
+
+.about-list{
+text-align: left;
 
 }
