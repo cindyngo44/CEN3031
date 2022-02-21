@@ -5,13 +5,14 @@ function Form({ Login, error }) {
     const [details, setDetails] = useState({name: "", password: ""});
 
     const submitHandler = e => {
-        e.preventDefault();
+        e.preventDefault(); //doesnot allow default values to trigger login function
 
-        Login(details);
+        Login(details); // fills the login parameter with name and password
     }
 
   return (
-    <form onSubmit={submitHandler}>
+    // defines form that when submitted with the submit input runs the submit handler 
+    <form onSubmit={submitHandler}> 
         <div className="form-inner">
             <h1>Login</h1>
             <br/>
