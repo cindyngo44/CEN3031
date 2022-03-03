@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('./components/font/GTWalsheimPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.About {
+  background: linear-gradient(#7BD860, #7DD48E, #80D0C7);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: 'GT Walsheim Pro', sans-serif;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+.about-h1{
+  font-size: 50px;
+  text-decoration: solid;
+}
+.about-h2{
+  font-size: 30px;
+  text-decoration: solid;
+}
+.about-p{
+  font-size: 20px;
+}
+.btn{
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 100px;
+  color: #7BD860;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0px;
+  width: 150px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+.btn:hover{
+  color:#80D0C7;
+  transform: scale(1.03);
+}
+.aboutus-text{
+}
+.about-list{
+text-align: left;
+
+}
