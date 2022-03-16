@@ -1,0 +1,19 @@
+.login-submit{
+  margin-top: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+.login-input{
+  box-shadow: inset #abacaf 0 0 0 2px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.767);
+  appearance: none;
+  position: relative;
+  border-radius: 3px;
+  line-height: 1.2;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  height: 25px;
+  transition: all .2s ease;
+
+}

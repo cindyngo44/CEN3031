@@ -24,63 +24,6 @@
   top: 0px;
   z-index: 2;
 }
-.sesh-logo {
-  position: absolute;
-  left: 2.33%;
-  right: 90.87%;
-  top: 4px;
-  bottom: 2.55%;
-  cursor: pointer;
-  z-index: 3;
-  height: 60px;
-  cursor: pointer;
-}
-#navbar{
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 65.31%;
-  background: rgba(256, 256, 256, .5);
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  z-index: 2;
-
-}
-#nav-links{
-  text-align: right;
-  margin-top: 20px;
-  z-index: 3;
-}
-#navbar-Home{
-  display: inline;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #FFFFFF;
-  text-decoration: none;
-  text-align: center;
-  z-index: 3;
-}
-#navbar-About{
-  display: inline;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #FFFFFF;
-  text-decoration: none;
-  text-align: center;
-  z-index: 3;
-}
-#navbar-Login{
-  display: inline;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #FFFFFF;
-  text-decoration: none;
-  text-align: center;
-  z-index: 3;
-}
 h1{
   font-size: 100px;
   margin: 10px;
@@ -102,12 +45,16 @@ p{
   margin: 0px;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
-
 .btn:hover{
   color:#80D0C7;
   transform: scale(1.03);
+  box-shadow: 0 0 0 0 #fff inset, #80D0C7 0 0 0 2px;
 }
-
+.btn:focus{
+  background: #fff;
+  outline: 0;
+  box-shadow: 0 0 0 0 #fff inset, #4b4b4b 0 0 0 3px;
+}
 .login-register{
   width: 200px;
   cursor: pointer;
@@ -115,45 +62,4 @@ p{
 .about-us{
   width: 200px;
   cursor: pointer;
-}
-
-.login-submit{
-  margin-top: 10px;
-  width: 200px;
-  cursor: pointer;
-}
-.login-input{
-  box-shadow: inset #abacaf 0 0 0 2px;
-  border: 0;
-  background: rgba(255, 255, 255, 0.767);
-  appearance: none;
-  position: relative;
-  border-radius: 3px;
-  line-height: 1.2;
-  color: rgb(0, 0, 0);
-  font-weight: 400;
-  height: 25px;
-  transition: all .2s ease;
-  
-
-}
-
-.login-input:hover{
-  box-shadow: 0 0 0 0 #fff inset, #80D0C7 0 0 0 2px;
-}
-.login-input:focus{
-  background: #fff;
-  outline: 0;
-  box-shadow: 0 0 0 0 #fff inset, #4b4b4b 0 0 0 3px;
-}
-
-.aboutus-text{
-  margin-left: 20%;
-  margin-right: 20%;
-
-}
-
-.about-list{
-text-align: left;
-
 }
