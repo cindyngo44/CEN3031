@@ -25,7 +25,7 @@ import Form from "./Form";
 
 
   return (
-    <div className="Home">
+    <div className="Home background-gradient">
       {(user.name !== "") ? //checks if name is not empty
       
       ( 

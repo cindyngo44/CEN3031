@@ -9,7 +9,7 @@ export default function About() {
     window.open("https://github.com/cindyngo44/CEN3031");
   };
   return (
-    <div className="About">
+    <div className="About background-gradient">
       <div className="about-h1">About Us ඞ</div>
       <div className="row">
         <div className="column">

@@ -8,7 +8,7 @@ import {  Link } from "react-router-dom";
 export default function Navbar() { {/* Navbar component */}
   return (
     
-      <header className="home-header">
+      <header className="nav-header">
         {/* Navbar Links: div must be contained in div:navbar in order for link to to work */}
         <div id="navbar">
           <div id="nav-links">

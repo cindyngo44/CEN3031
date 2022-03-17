@@ -5,10 +5,10 @@ import {  Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="Home">
+    <div className="Home background-gradient">
       
-      <h1>Welcome to Sesh</h1>
-      <p>Study Among Us</p>
+      <h1 id="home-h1">Welcome to Sesh</h1>
+      <p id="home-p">Study Among Us</p>
       
       <Link to="/Login" > <button className="btn login-register">Login/Register</button> </Link>
 
