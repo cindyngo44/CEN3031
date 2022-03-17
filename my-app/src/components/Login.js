@@ -1,4 +1,5 @@
 import '../App.css';
+import '../Login.css';
 import { useState } from 'react';
 import React from 'react'
 import {  Link } from "react-router-dom";
@@ -32,7 +33,7 @@ import Form from "./Form";
          <div>
       <br/>
       <h1>Welcome, <span>{user.name}</span> </h1> 
-      <button className='btn login-submit' onClick={Logout}> Logout </button>
+      <button className='btn' onClick={Logout}> Logout </button>
          </div>
       ) 
     :
