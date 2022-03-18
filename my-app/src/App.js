@@ -4,6 +4,11 @@ import './App.css';
  import Home from './components/Home';
  import Login from './components/Login';
 import Navbar from './components/Navbar';
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+library.add(faBars);
+
 function App() {
   return (
     <div> 
