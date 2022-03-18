@@ -46,7 +46,12 @@
   width: 200px;
   cursor: pointer;
 }
-
 .background-gradient{
   background: linear-gradient(#7BD860, #7DD48E, #80D0C7);
+}
+.background-solid-green{
+  background: #7BD860;
+}
+.background-solid-blue{
+  background: #80D0C7;
 }
