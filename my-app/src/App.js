@@ -5,6 +5,9 @@ import './App.css';
  import Login from './components/Login';
 import Navbar from './components/Navbar';
 import Sesh from './components/Sesh';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+library.add(faBars);
 
 function App() {
   return (
