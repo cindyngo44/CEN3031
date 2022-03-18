@@ -4,6 +4,8 @@ import './App.css';
  import Home from './components/Home';
  import Login from './components/Login';
 import Navbar from './components/Navbar';
+import Sesh from './components/Sesh';
+
 function App() {
   return (
     <div> 
@@ -15,6 +17,7 @@ function App() {
        <Route path="/" element={<Home />} /> 
       <Route path="/About" element={<About/>} />
       <Route path="/Login" element={<Login/>} />
+      <Route path="/Sesh" element={<Sesh/>} />
       </Routes>
 
     </Router>  
