@@ -11,7 +11,8 @@ export default function About() {
   return (
     <div className="background-gradient" id="about">
       <div className="about-h1">About Us ඞ</div>
-      <div className="row">
+      <div className="row background-solid-white">
+        {/* First Column */}
         <div className="column">
           <div className="about-h2">  Who are we? </div>
           <div className="about-p">
@@ -33,10 +34,11 @@ export default function About() {
           </div>
           <br></br>
           <br></br>
-          <div className="btn-link" onClick={handleClick}>
+          <div id="btn-github" onClick={handleClick}>
           <button className="btn about-us">GitHub</button>
           </div>
         </div>
+        {/* Second Column */}
         <div className="column spacing-top">
           <div className="about-h2">Let's talk about Sesh</div>
           <div className="about-p">
@@ -57,6 +59,8 @@ export default function About() {
           </ul>
         </div>
       </div>
+      <br></br>
+          <br></br>
     </div>
   )
 }

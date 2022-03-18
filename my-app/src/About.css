@@ -3,16 +3,19 @@
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #242424;
   font-family: 'GT Walsheim Pro', sans-serif;
 }
 .column {
   float: left;
   width: 50%;
+  padding: 40px;
 }
 .row {
   display: flex;
   margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 25px;
   justify-content: center;
 }
 .row:after {
@@ -25,35 +28,36 @@
   margin-left: 60px;
   font-size: 50px;
   font-weight: bold;
+  color: #FFFFFF;
 }
 .about-h2{
   font-size: 30px;
   font-weight: bold;
+  color: #7ed48e;
 }
 .about-p{
   font-size: 20px;
   margin: 10px;
-}
-.btn-link{
-  width: 100px;
 }
 .about-li{
   text-align: left;
   font-size: 20px;
   padding: -40px;
 }
-.spacing-top{
-  padding-top: 0px;
+#btn-github{
+  width: 200px;
 }
 /* Mobile responsiveness */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
+    padding: 0px;
   }
   .row {
     display: table;
-    padding: 20px;
+    padding: 30px;
     margin-left: 0px;
+    margin-right: 0px;
   }
   .about-h1{
     margin: auto;

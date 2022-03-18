@@ -4,17 +4,6 @@
   font-weight: normal;
   font-style: normal;
 }
-.Home {
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  font-family: 'GT Walsheim Pro', sans-serif;
-}
 .btn{
   background-color: #FFFFFF;
   border: none;
@@ -27,6 +16,8 @@
   font-size: 16px;
   margin: 0px;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  width: 200px;
+  cursor: pointer;
 }
 .btn:hover{
   color:#80D0C7;
@@ -38,14 +29,6 @@
   outline: 0;
   box-shadow: 0 0 0 0 #fff inset, #4b4b4b 0 0 0 3px;
 }
-.login-register{
-  width: 200px;
-  cursor: pointer;
-}
-.about-us{
-  width: 200px;
-  cursor: pointer;
-}
 .background-gradient{
   background: linear-gradient(#7BD860, #7DD48E, #80D0C7);
 }
@@ -54,4 +37,10 @@
 }
 .background-solid-blue{
   background: #80D0C7;
+}
+.spacing-top{
+  padding-top: 0px;
+}
+.background-solid-white{
+  background: #FFFFFF;
 }
