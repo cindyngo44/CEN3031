@@ -5,7 +5,6 @@
   font-style: normal;
 }
 .Home {
-  background: linear-gradient(#7BD860, #7DD48E, #80D0C7);
   min-height: 100vh;
   text-align: center;
   display: flex;
@@ -15,22 +14,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
   font-family: 'GT Walsheim Pro', sans-serif;
-}
-.home-header {
-  position: fixed;
-  width: 100vw;
-  height: 196px;
-  left: 0px;
-  top: 0px;
-  z-index: 2;
-}
-h1{
-  font-size: 100px;
-  margin: 10px;
-}
-p{
-  font-size: 30px;
-  margin: 25px;
 }
 .btn{
   background-color: #FFFFFF;
@@ -62,4 +45,13 @@ p{
 .about-us{
   width: 200px;
   cursor: pointer;
+}
+.background-gradient{
+  background: linear-gradient(#7BD860, #7DD48E, #80D0C7);
+}
+.background-solid-green{
+  background: #7BD860;
+}
+.background-solid-blue{
+  background: #80D0C7;
 }

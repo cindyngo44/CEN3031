@@ -9,7 +9,7 @@ export default function About() {
     window.open("https://github.com/cindyngo44/CEN3031");
   };
   return (
-    <div className="About">
+    <div className="background-gradient" id="about">
       <div className="about-h1">About Us ඞ</div>
       <div className="row">
         <div className="column">
@@ -18,18 +18,26 @@ export default function About() {
           Due to the consequences of the global pandemic that we are currently experiencing, we noticed that it is 
           difficult to find captivating virtual study environments. And being college students ourselves, we realized 
           that this is a challenging time and sometimes it's hard to avoid burnout and easy to fall victim to feeling 
-          alone in the stress and anxiety of work. While being able to address this problem, we also wanted to build a 
+          alone in the stress and anxiety of work.
+          <br></br> 
+          <br></br>
+          While being able to address this problem, we also wanted to build a 
           habit tracker to motivate students to persistently keep up with their goals. We aim to create a fun atmosphere 
           that mirrors a gaming environment that inspires students to persevere and accomplish their ambitions while engaging 
-          in healthy competition with their peers. We are hopeful that Sesh's leaderboard and point system may further help 
+          in healthy competition with their peers. 
+          <br></br>
+          <br></br>
+          We are hopeful that Sesh's leaderboard and point system may further help 
           with keeping students incentivized and help them feel encouraged and motivated by monitoring each other's progress
            and make friends in this creative workspace! 
           </div>
+          <br></br>
+          <br></br>
           <div className="btn-link" onClick={handleClick}>
           <button className="btn about-us">GitHub</button>
           </div>
         </div>
-        <div className="column">
+        <div className="column spacing-top">
           <div className="about-h2">Let's talk about Sesh</div>
           <div className="about-p">
           Our project involves a study habit tracker which details the user’s daily activity and statistically computes 
@@ -37,8 +45,8 @@ export default function About() {
           their usernames and passwords as identifiers. We will create a competitive environment by implementing a leaderboard 
           which allows users to participate in a highly motivating workspace. 
           </div>
-          <h2 className="about-h2"> What features can you expect to find?</h2>
-          <ul className="about-list"> {/* Unordered list */}
+          <h2 className="about-h2 spacing-top"> What features can you expect to find?</h2>
+          <ul className="about-li"> {/* Unordered list */}
             <li>Calendar streaks </li>
             <li>Pie Chart</li> 
             <li>User Profile</li>
