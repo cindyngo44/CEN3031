@@ -26,7 +26,7 @@ export default function Navbar() { {/* Navbar component */}
           <div className="nav-links" id="navResponsive">
             <Link to="/" id="navbar-Home">Home</Link>
             <Link to="/About" id="navbar-About">About Us</Link>
-            <Link to="/Login" id="navbar-Login">Login/Register</Link>
+            <Link to="/Register" id="navbar-Login">Login/Register</Link>
             <FontAwesomeIcon icon="fa-bars fa-solid" className="icon" />
           </div>
         </div>

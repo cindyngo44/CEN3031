@@ -2,8 +2,6 @@ import logo from '../images/logo.svg';
 import '../About.css';
 import Navbar from './Navbar';
 import React from 'react'
-import {  Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function About() {
   const handleClick = () => {
@@ -63,4 +61,3 @@ export default function About() {
     </div>
   )
 }
-
