@@ -2,7 +2,6 @@ import logo from '../images/logo.svg';
 import '../About.css';
 import Navbar from './Navbar';
 import React from 'react'
-import {  Link } from "react-router-dom";
 
 export default function About() {
   const handleClick = () => {
@@ -11,7 +10,8 @@ export default function About() {
   return (
     <div className="background-gradient" id="about">
       <div className="about-h1">About Us ඞ</div>
-      <div className="row">
+      <div className="row background-solid-white">
+        {/* First Column */}
         <div className="column">
           <div className="about-h2">  Who are we? </div>
           <div className="about-p">
@@ -32,11 +32,11 @@ export default function About() {
            and make friends in this creative workspace! 
           </div>
           <br></br>
-          <br></br>
-          <div className="btn-link" onClick={handleClick}>
-          <button className="btn about-us">GitHub</button>
+          <div id="btn-github" onClick={handleClick}>
+          <button className="btn-github-style about-us">Github</button>
           </div>
         </div>
+        {/* Second Column */}
         <div className="column spacing-top">
           <div className="about-h2">Let's talk about Sesh</div>
           <div className="about-p">
@@ -57,7 +57,7 @@ export default function About() {
           </ul>
         </div>
       </div>
+      <br></br>
     </div>
   )
 }
-

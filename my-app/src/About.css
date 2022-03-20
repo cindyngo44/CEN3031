@@ -3,16 +3,19 @@
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #242424;
   font-family: 'GT Walsheim Pro', sans-serif;
 }
 .column {
   float: left;
   width: 50%;
+  padding: 40px;
 }
 .row {
   display: flex;
   margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 25px;
   justify-content: center;
 }
 .row:after {
@@ -21,44 +24,63 @@
   clear: both;
 }
 .about-h1{
-  padding-top: 100px;
+  padding-top: 75px;
   margin-left: 60px;
   font-size: 50px;
   font-weight: bold;
+  color: #FFFFFF;
 }
 .about-h2{
   font-size: 30px;
   font-weight: bold;
+  color: #7ed48e;
 }
 .about-p{
   font-size: 20px;
   margin: 10px;
-}
-.btn-link{
-  width: 100px;
 }
 .about-li{
   text-align: left;
   font-size: 20px;
   padding: -40px;
 }
-.spacing-top{
-  padding-top: 0px;
+#btn-github{
+  width: 150px;
+}
+.btn-github-style{
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  background-color: #7DD48E;
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  width: 150px;
+  transition: all 0.3s ease;
+}
+.btn-github-style:hover{
+  background-color: #7DD48E;
 }
 /* Mobile responsiveness */
 @media screen and (max-width: 600px) {
   .column {
-    width: 100%;
-  }
+      width: 100%;
+      padding: 0px;
+ }
   .row {
-    display: table;
-    padding: 20px;
-    margin-left: 0px;
-  }
+      display: table;
+      padding: 30px;
+      margin-left: 0px;
+      margin-right: 0px;
+ }
   .about-h1{
-    margin: auto;
-  }
+      margin: auto;
+ }
   .spacing-top{
-    padding-top: 50px;
-  }
+      padding-top: 50px;
+ }
 }
