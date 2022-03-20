@@ -27,7 +27,7 @@ export default function Navbar() { {/* Navbar component */}
             <Link to="/" id="navbar-Home">Home</Link>
             <Link to="/About" id="navbar-About">About Us</Link>
             <Link to="/Login" id="navbar-Login">Login/Register</Link>
-            <FontAwesomeIcon icon="fa-bars fa-solid" className="icon" />
+            <FontAwesomeIcon icon="fa-bars fa-solid" className="icon" onClick={toggleVisibility}/>
           </div>
         </div>
         <Link to="/" > <img src={logo} className="sesh-logo" alt="logo" /> </Link>   {/* Logo  */}
