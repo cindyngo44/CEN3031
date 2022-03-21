@@ -43,7 +43,9 @@ import Form from "./Form";
  <br/>
  <Form Login={Login} error={error} />
  <br/>
+ <Link to="/" > <button className="btn login1">LoginNow</button> </Link>  
  <Link to="/" > <button className="btn about-us">Home</button> </Link>   
+
     </div>
     )}
             

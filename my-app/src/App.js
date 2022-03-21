@@ -2,8 +2,9 @@ import './App.css';
  import About from  './components/About';
  import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
  import Home from './components/Home';
- import Register from './components/Register';
  import Login from './components/Login';
+ import LoginNow from './components/LoginNow';
+ import Register from './components/Register';
 import Navbar from './components/Navbar';
 import Sesh from './components/Sesh';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -21,6 +22,7 @@ function App() {
        <Route path="/" element={<Home />} /> 
       <Route path="/About" element={<About/>} />
       <Route path="/Login" element={<Login/>} />
+      <Route path="/LoginNow" element={<LoginNow/>} />
       <Route path="/Register" element={<Register/>} />
       <Route path="/Sesh" element={<Sesh/>} />
       </Routes>
