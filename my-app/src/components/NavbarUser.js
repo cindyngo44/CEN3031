@@ -14,9 +14,9 @@ export default function Navbar() { {/* Navbar component */}
         <div className="navbar">
           <div className="nav-links" id="navResponsive">
             <Link to="/" className="navbar-text">Sesh</Link>
-            <Link to="/About" className="navbar-text">Profile</Link>
-            <Link to="/Login" className="navbar-text">Leaderboard</Link>
-            <Link to="/Login" className="navbar-text">Logout</Link>
+            <Link to="/" className="navbar-text">Profile</Link>
+            <Link to="/" className="navbar-text">Leaderboard</Link>
+            <Link to="/" className="navbar-text">Logout</Link>
           </div>
         </div>
         <Link to="/" > <img src={logo} className="sesh-logo" alt="logo" /> </Link>   {/* Logo  */}
