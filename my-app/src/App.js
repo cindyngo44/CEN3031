@@ -6,6 +6,8 @@ import './App.css';
  import LoginNow from './components/LoginNow';
  import Register from './components/Register';
 import Navbar from './components/Navbar';
+import NavbarUser from './components/NavbarUser';
+import MusicWidget from './components/SeshComponents/MusicWidget';
 import Sesh from './components/Sesh';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -24,7 +26,9 @@ function App() {
       <Route path="/Login" element={<Login/>} />
       <Route path="/LoginNow" element={<LoginNow/>} />
       <Route path="/Register" element={<Register/>} />
+      <Route path="/NavbarUser" element={<NavbarUser/>} />
       <Route path="/Sesh" element={<Sesh/>} />
+      <Route path="/MusicWidget" element={<MusicWidget/>} />
       </Routes>
 
     </Router>  
