@@ -2,14 +2,14 @@ import '../App.css';
 import '../Sesh.css';
 import React from 'react'
 import {  Link } from "react-router-dom";
-import ToDoList from './SeshComponents/ToDoList';
+import Todo from './SeshComponents/Todo';
 
 export default function Sesh() {
   return (
-    <div className="Home">
+    <div className="background-gradient">
       
       <h1>Sesh</h1>   
-    <ToDoList/>
+    <Todo/>
     
     </div>
   )
