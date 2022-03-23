@@ -8,6 +8,8 @@ export default function About() {
     window.open("https://github.com/cindyngo44/CEN3031");
   };
   return (
+    <div>
+      <Navbar/>
     <div className="background-gradient" id="about">
       <div className="about-h1">About Us ඞ</div>
       <div className="row background-solid-white">
@@ -58,6 +60,7 @@ export default function About() {
         </div>
       </div>
       <br></br>
+    </div>
     </div>
   )
 }

@@ -1,9 +1,5 @@
   /* File: src/components/Todo.css */
-    
- 
-  
   .todo-container {
-    background: linear-gradient(#7BD860, #7DD48E, #80D0C7);
     width: 40vw;
     border-radius: 15px;
     padding: 20px 10px;

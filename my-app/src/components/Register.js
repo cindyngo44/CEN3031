@@ -1,12 +1,14 @@
 import logo from '../images/logo.svg';
 import '../Register.css';
-import Navbar from './Navbar';
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 export default function Register() {
     
     return (
+      <div>
+                <Navbar/>
         <div className="background-gradient" id="registration">
         <div className="wrapper">
         <h2>Registration</h2>
@@ -32,9 +34,10 @@ export default function Register() {
           </div>
           <div className="text">
             <h3>Already have an account? 
-            <Link to="/LoginNow"> Login now</Link></h3>
+            <Link to="/Login"> Login now</Link></h3>
           </div>
         </form>
+      </div>
       </div>
       </div>
     )
