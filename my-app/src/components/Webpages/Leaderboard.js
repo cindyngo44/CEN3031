@@ -1,2 +1,2 @@
-import NavbarUser from './NavbarUser';
+import NavbarUser from '../Webpage-Components/Navbar-User';
 <NavbarUser/>

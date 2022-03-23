@@ -1,8 +1,7 @@
-import logo from '../images/logo.svg';
-import '../Register.css';
+import '../Webpages/Register.css';
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from '../Webpage-Components/Navbar';
 
 export default function Register() {
     
