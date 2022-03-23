@@ -1,4 +1,3 @@
-import '../SeshComponents/MusicWidget.css';
 import React  from 'react';
 import YouTube from 'react-youtube';
 
