@@ -1,4 +1,4 @@
-import NavbarUser from './Navbar-User';
+import NavbarUser from '../Webpage-Components/Navbar-User';
 
 import React, { Component } from 'react'
 
