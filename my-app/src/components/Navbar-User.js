@@ -16,7 +16,7 @@ export default function Navbar() { {/* Navbar component */}
             <Link to="/Sesh" className="navbar-text">Sesh</Link>
             <Link to="/" className="navbar-text">Profile</Link>
             <Link to="/" className="navbar-text">Leaderboard</Link>
-            <Link to="/" className="navbar-text">Logout</Link>
+            <Link to="/Home" className="navbar-text">Logout</Link>  {/* LOGOUT  */}
           </div>
         </div>
         <Link to="/" > <img src={logo} className="sesh-logo" alt="logo" /> </Link>   {/* Logo  */}

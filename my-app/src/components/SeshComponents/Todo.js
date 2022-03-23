@@ -65,7 +65,7 @@ function Todo() {
 
     return ( 
         // the actual jsx thats returned/displayed for this component
-        <div className="todo-container">
+        <div className="todo-container background-solid-blue">
             <div className="header">TODO</div>
             <div className="tasks">
                 {tasks.map((task, index) => (
