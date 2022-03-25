@@ -1,6 +1,6 @@
-import logo from '../images/Logo_icon.png';
-import '../App.css';
-import '../Navbar.css';
+import logo from '../../images/Logo_icon.png';
+import '../../App.css';
+import '../Webpage-Components/Navbar.css';
 
 import React from 'react'
 import {  Link } from "react-router-dom";
@@ -20,7 +20,7 @@ function log(){
             <Link to="/Sesh" className="navbar-text">Sesh</Link>
             <Link to="/Profile" className="navbar-text">Profile</Link>
             <Link to="/Leaderboard" className="navbar-text">Leaderboard</Link>
-            <Link to="/Login" onClick={log} className="navbar-text">Logout</Link>
+            <Link to="/Login" onClick={log} className="navbar-text">Logout</Link>  {/* LOGOUT  */}
           </div>
         </div>
         <Link to="/" > <img src={logo} className="sesh-logo" alt="logo" /> </Link>   {/* Logo  */}
