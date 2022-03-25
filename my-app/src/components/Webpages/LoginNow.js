@@ -1,8 +1,7 @@
-import logo from '../images/logo.svg';
-import '../LoginNow.css';
+import '../Webpages/LoginNow.css';
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from '../Webpage-Components/Navbar';
 import { useState } from 'react';
 
 export default function LoginNow() {

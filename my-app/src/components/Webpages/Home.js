@@ -1,8 +1,8 @@
-import '../App.css';
-import '../Home.css';
+import '../../App.css';
+import '../Webpages/Home.css';
 import React from 'react'
 import {  Link } from "react-router-dom";
-import Navbar from './Navbar';
+import Navbar from '../Webpage-Components/Navbar';
 
 export default function Home() {
   return (

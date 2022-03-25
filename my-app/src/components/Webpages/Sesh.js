@@ -1,10 +1,9 @@
-import '../App.css';
-import '../Sesh.css';
+import '../../App.css';
+import '../Webpages/Sesh.css';
 import React from 'react'
-import {  Link } from "react-router-dom";
-import Todo from './SeshComponents/Todo';
-import MusicWidget from './SeshComponents/MusicWidget';
-import NavbarUser from './Navbar-User';
+import Todo from '../SeshComponents/Todo';
+import MusicWidget from '../SeshComponents/MusicWidget';
+import NavbarUser from '../Webpage-Components/Navbar-User';
 
 export default function Sesh() {
   return (
