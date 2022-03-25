@@ -8,6 +8,9 @@ export default class Profile extends Component {
     return (
       <div>
       <NavbarUser/>
+      <br/>
+      <br/>
+      <h1>Welcome {localStorage.getItem("user")} </h1>
       </div>
     )
   }

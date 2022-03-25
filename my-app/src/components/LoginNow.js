@@ -4,16 +4,38 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
+
+
 
 export default function LoginNow() {
     const [user, setUser] = useState({name: ""}); {/* Define react use states for handleing variables  */}
     const [password, setPassword] = useState({password: ""});
+    const [logged, setLogged] = useState(false);
     // const [error, setError] = useState("");
   
      function Login(){
       console.log(user);
-      console.log(password);
+      localStorage.setItem("user",user);
+      setLogged(validLogin);
+      if(validLogin() === false){
+        alert("Error either your username or password is incorrect");
+      }
      } {/* Login for now just sets the useState user equal to the name inputed  from the details array in the Form component*/}
+
+    function validLogin(){
+      if(user === "admin" && password === "admin" ){
+          return true;
+      }
+      else{
+        return false;
+      }
+
+
+
+    }
+    
+
     
     return (
       <div>
@@ -43,6 +65,7 @@ export default function LoginNow() {
         <div className="signup-link"><Link to="/Register">Not a member?</Link>
         </div>
       </form>
+      { logged ? (<Navigate replace to="/Profile" />) : null }
     </div>
             </div>
             </div>
