@@ -7,6 +7,7 @@ import './App.css';
  import Register from './components/Register';
 import Navbar from './components/Navbar';
 import Sesh from './components/Sesh';
+import DefaultTimer from './components/DefaultTimer';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 library.add(faBars);
@@ -25,6 +26,8 @@ function App() {
       <Route path="/LoginNow" element={<LoginNow/>} />
       <Route path="/Register" element={<Register/>} />
       <Route path="/Sesh" element={<Sesh/>} />
+      <Route path="/DefaultTimer" element={<DefaultTimer/>} />
+      {/*<Route path="/MusicWidget" element={<MusicWidget/>} />*/}
       </Routes>
 
     </Router>  

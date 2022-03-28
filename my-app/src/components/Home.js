@@ -11,7 +11,9 @@ export default function Home() {
       {/* Homepage Buttons */}
       <Link to="/LoginNow" > <button className="btn login-register">Login/Register</button> </Link>
       <br />
-      <Link to="/About" > <button className="btn about-us">About Us</button> </Link>         
+      <Link to="/About" > <button className="btn about-us">About Us</button> </Link> 
+      <br />
+      <Link to="/DefaultTimer" > <button className="btn timer">Timer</button> </Link>
     </div>
   )
 }
