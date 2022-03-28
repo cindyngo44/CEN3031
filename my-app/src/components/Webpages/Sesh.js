@@ -5,6 +5,7 @@ import Todo from '../SeshComponents/Todo';
 import MusicWidget from '../SeshComponents/MusicWidget';
 import NavbarUser from '../Webpage-Components/Navbar-User';
 import Resources from '../SeshComponents/Resources';
+import DefaultTimer from '../SeshComponents/DefaultTimer';
 
 export default function Sesh() {
   return (
@@ -16,6 +17,7 @@ export default function Sesh() {
       <Todo/>
       <MusicWidget/>
       <Resources/>
+      <DefaultTimer/>
     </div>
     </div>
   )
