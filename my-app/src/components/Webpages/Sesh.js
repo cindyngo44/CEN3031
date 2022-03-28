@@ -4,6 +4,7 @@ import React from 'react'
 import Todo from '../SeshComponents/Todo';
 import MusicWidget from '../SeshComponents/MusicWidget';
 import NavbarUser from '../Webpage-Components/Navbar-User';
+import Resources from '../SeshComponents/Resources';
 
 export default function Sesh() {
   return (
@@ -14,6 +15,7 @@ export default function Sesh() {
       <h1>Sesh</h1>   
       <Todo/>
       <MusicWidget/>
+      <Resources/>
     </div>
     </div>
   )
