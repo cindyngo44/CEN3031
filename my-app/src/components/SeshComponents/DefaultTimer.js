@@ -58,10 +58,12 @@ class DefaultTimer extends React.Component {
   render() {
     return (
       <main className="App">
-        <div className="wrapper">
+        <div className="timer-wrapper">
 
           <section>
-          <h2 className="app-title">Start A Sesh!</h2>
+            <div className="app-title">
+              <h2>Start A Sesh!</h2>
+              </div>
           <section id="interval-container">
             <BreakInterval
             onBreakIntervalChange = {this.onBreakIntervalChange}

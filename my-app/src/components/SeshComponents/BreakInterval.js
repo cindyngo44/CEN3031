@@ -18,7 +18,9 @@ function BreakInterval(props) {
 
   return (
     <section id="break-interval-container">
-      <h4>Break Length</h4>
+      <div className="sesh-title">
+        <h4>Break Length</h4>
+      </div>
       <section id="break-time-interval">
         <button
         disabled = {props.isPlay ? "disabled" : ""}

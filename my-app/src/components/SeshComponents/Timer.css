@@ -1,28 +1,29 @@
 #session-container {
-    border: 5px solid rgba(38,54,70,0.7);
-    box-shadow: 0 2px 16px rgba(0,0,0,0.40);
-    width: 300px;
+    border: 4px solid #242424;
+    width: 200px;
     margin: 35px auto;
     border-radius: 25px;
   }
-  
   .session-timer {
-    margin: 0 0 20px 0;
-    font-size: 5rem;
+    font-size: 3rem;
     color: #263646;
     font-weight: 400;
   }
-  
   .session-header {
-    margin-top: 20px;
+    margin: -0.5em;
   }
-  
+  .session-header h4{
+    font-family: 'GT Walsheim Pro';
+    font-size: 1rem;
+    color: #80D0C7;
+    margin-bottom: 10px;
+  }
   #colon {
     position: relative;
-    bottom: 7px;
+    bottom: 6px;
     margin: 0 8px;
   }
-  
+
   .timer-alert {
     color: #C44949;
   }

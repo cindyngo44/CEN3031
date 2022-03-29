@@ -1,14 +1,15 @@
 #actions-container {
     display: flex;
     justify-content: center;
+    margin-top: -15px;
   }
   
   #actions-container button {
-      background-color: #263646;
+      background-color: #242424;
       color: #fff;
       margin: 0 10px;
       padding: 7px 15px;
-      border-radius: 2px;
+      border-radius: 50px;
       border: none;
       outline: none;
       font-size: 1.2rem;
