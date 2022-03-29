@@ -4,7 +4,7 @@ import YouTube from 'react-youtube';
 class MusicWidget extends React.Component {
   render() {
     const opts = {
-      height: '300',
+      height: '270',
       width: '350',
       playerVars: {
         autoplay: 1,

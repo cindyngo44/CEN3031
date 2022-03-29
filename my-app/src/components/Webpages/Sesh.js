@@ -11,14 +11,20 @@ export default function Sesh() {
   return (
     <div>
       <NavbarUser/>
-    <div className="background-gradient">
-      
-      <h1>Sesh</h1>   
-      <Todo/>
-      <MusicWidget/>
-      <Resources/>
-      <DefaultTimer/>
-    </div>
+      <div className="background-gradient"> 
+      <div className="outer-container">
+        <div className="flex-container">
+            <DefaultTimer/>
+            <div className='sesh-spacing'></div>
+            <Resources/>
+          </div>
+          <div className="flex-container2">
+            <Todo/>
+            <div className='sesh-spacing'></div>
+            <MusicWidget/>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
