@@ -1,16 +1,18 @@
 .resources-container {
     width: 300px;
-    height: 400px;
+    height: 250px;
     border-radius: 25px;
     padding: 20px 10px;
-    color: #4b4b4b;
+    color: #242424;
   }
-
+  .resources-select{
+   text-align: center;
+  }
  .select {
-    border: 3px solid black;
+   border: 2px solid #242424;
+    width: 75%;
     padding: 1em;
-    margin: 0.75em;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     text-decoration: none;
  }
@@ -25,18 +27,17 @@
     background: linear-gradient(-135deg, #80D0C7, #7DD48E);
   }
 
-  li {
-    border-bottom: 3px solid #80D0C7;
-    padding: 1em;
-    font-size: 20px;
+  .resources-li {
+    padding: .75em;
+    font-size: 12px;
     font-weight: bold;
   }
 
-  a {
+  .resources-a {
     text-decoration: none;
     color: #4b4b4b;
   }
 
-  a:hover {
+  .resources-a:hover {
     text-decoration: underline;
   }
