@@ -15,7 +15,7 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
   build:
-    working_directory: ~/home/my-app/
+    working_directory: ~/repo
     docker:
       - image: cimg/node:16.13.2
     steps:
