@@ -4,6 +4,16 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 jobs:
+  say-hello:
+    docker:
+      - image: cimg/base:stable
+    # Add steps to the job
+    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World!"
   build:
     working_directory: ~/repo
     docker:
@@ -33,9 +43,9 @@ jobs:
           name: Deploy to Netlify
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=build
 workflows:
-  version: 2
   build-deploy:
     jobs:
+      - say-hello
       - build:
           filters:
             branches:
