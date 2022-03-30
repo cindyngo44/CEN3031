@@ -15,11 +15,12 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
   build:
-    working_directory: ~/repo
+    working_directory: ~/CEN3031/my-app
     docker:
       - image: cimg/node:16.13.2
     steps:
-      - checkout
+      - checkout:
+          path:  ~/CEN3031
       - run:
           name: Update NPM
           command: "sudo npm install -g npm"
@@ -27,14 +28,14 @@ jobs:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
           name: Install Dependencies
-          command: cd my-app && npm install
+          command: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
       - run:
           name: Build React App
-          command: cd my-app && npm run build
+          command: run build
       - save_cache:
           key: app-build-cache-{{ .Branch }}
           paths:
