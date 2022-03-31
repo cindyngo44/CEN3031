@@ -13,19 +13,19 @@ export default function Register() {
         <h2>Registration</h2>
         <form action="#">
           <div className="input-box">
-            <input type="text" placeholder="Enter your name" required></input>
+            <input type="text" placeholder="Enter Your Name" required></input>
           </div>
           <div className="input-box">
-            <input type="text" placeholder="Enter your email" required></input>
+            <input type="text" placeholder="Enter Your Email" required></input>
           </div>
           <div className="input-box">
-            <input type="password" placeholder="Create password" required></input>
+            <input type="password" placeholder="Create Password" required></input>
           </div>
           <div className="input-box">
-            <input type="password" placeholder="Confirm password" required></input>
+            <input type="password" placeholder="Confirm Password" required></input>
           </div>
           <div className="input-box">
-            <input type="number" placeholder="Enter your age" required></input>
+            <input type="number" placeholder="Enter Your Age" required></input>
           </div>
           <div className="policy">
             <input type="checkbox"></input>
