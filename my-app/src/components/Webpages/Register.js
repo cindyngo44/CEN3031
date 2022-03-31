@@ -25,7 +25,7 @@ export default function Register() {
             <input type="password" placeholder="Confirm password" required></input>
           </div>
           <div className="input-box">
-            <input type="age" placeholder="Enter your age" required></input>
+            <input type="number" placeholder="Enter your age" required></input>
           </div>
           <div className="policy">
             <input type="checkbox"></input>
