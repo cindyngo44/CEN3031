@@ -13,6 +13,9 @@ class DefaultTimer extends React.Component {
       sessionInterval: 25,
       timerMinute: 25,
       isPlay: false,
+
+      /*this.state sets the default 
+    (the default values are based on the original pomodoro timer -> 25 minutes of work, 5 min of break) */
     }
 
     this.onBreakIntervalChange = this.onBreakIntervalChange.bind(this);
@@ -20,18 +23,24 @@ class DefaultTimer extends React.Component {
     this.onTimerMinuteChange = this.onTimerMinuteChange.bind(this);
     this.onPlayChange = this.onPlayChange.bind(this);
     this.onResetTimer = this.onResetTimer.bind(this);
+
+    /*The bind() is an inbuilt method in React that is used to pass the data 
+    as an argument to the function of a class based component */
   }
 
   onPlayChange(isPlay) {
     this.setState({
       isPlay: isPlay
     })
+
+    /* setting state of timer. if start is pressed, timer is in "play" mode */
   }
 
   onBreakIntervalChange(newBreakLength) {
     this.setState({
       breakInterval: newBreakLength
     })
+    /* setting new break length */
   }
 
   onSessionIntervalChange(newSessionLength) {
@@ -39,12 +48,15 @@ class DefaultTimer extends React.Component {
       sessionInterval: newSessionLength,
       timerMinute: newSessionLength
     })
+    /* when new session length is set, we are setting the sesh interval to that new time */
   }
 
   onTimerMinuteChange(minuteChange) {
     this.setState({
       timerMinute: minuteChange
     })
+
+    /* setting the timer minute hand */
   }
 
   onResetTimer() {
@@ -53,6 +65,8 @@ class DefaultTimer extends React.Component {
       timerMinute: 25,
       breakInterval: 5
     })
+       /*sets it back to the default settings
+    (the default values are based on the original pomodoro timer -> 25 minutes of work, 5 min of break) */
   }
 
   render() {
@@ -82,6 +96,7 @@ class DefaultTimer extends React.Component {
           breakInterval = {this.state.breakInterval}
           onPlayChange = {this.onPlayChange}
           resetTimer = {this.onResetTimer}
+          isPlay = {this.state.isPlay}
           />
         </section>
         

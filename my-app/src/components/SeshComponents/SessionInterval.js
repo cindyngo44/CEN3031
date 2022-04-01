@@ -8,8 +8,11 @@ function SessionInterval(props) {
 
     if (currentInterval >= 60) {
       return;
+       /* won't let counter go above 60 */
     }
     props.onSessionIntervalChange(props.sessionInterval + 1);
+
+    /* function meant to increment counter on the Session Interval section */
   }
 
   function decreaseCounter() {
@@ -17,9 +20,11 @@ function SessionInterval(props) {
 
     if (currentInterval === 0) {
       return;
+        /* won't let counter go below 0 */
     }
 
     props.onSessionIntervalChange(currentInterval - 1);
+    /* function meant to decrement counter on the Session Interval Section */
   }
 
   return (

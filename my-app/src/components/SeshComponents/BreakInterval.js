@@ -3,7 +3,18 @@ import './BreakInterval.css';
 
 function BreakInterval(props) {
   function increaseCounter() {
-    props.onBreakIntervalChange(props.breakInterval + 1);
+
+    const currentInterval = props.breakInterval;
+
+    if (currentInterval >= 60) {
+      return;
+      /* won't let counter go above 60 */
+    }
+
+
+    props.onBreakIntervalChange(currentInterval + 1);
+
+    /* function meant to increment counter on the Break Interval section */
   }
 
   function decreaseCounter() {
@@ -11,9 +22,12 @@ function BreakInterval(props) {
 
     if (currentInterval === 0) {
       return;
+      /* won't let counter go below 0 */
     }
 
     props.onBreakIntervalChange(currentInterval - 1);
+
+    /* function meant to decrement counter on the Break Interval Section */
   }
 
   return (
