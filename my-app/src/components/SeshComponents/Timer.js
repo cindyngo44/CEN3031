@@ -48,12 +48,20 @@ class Timer extends React.Component {
                 isSessionInterval: false
               })
 
+              if(this.state.isSessionInterval === false){
+                alert("You have finished a Sesh! Congrats!");
+              }
+
               this.props.onTimerMinuteChange(this.props.breakInterval);
             } else {
               // start session timer
               this.setState({
                 isSessionInterval: true
               })
+
+              if(this.state.isSessionInterval === true){
+                alert("You have finished a Break! Back to work!");
+              }
 
               this.props.onTimerMinuteChange(this.props.sessionInterval);
             }
