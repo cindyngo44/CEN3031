@@ -14,7 +14,7 @@
     font-weight: bold;
     text-decoration: none;
   }
-  .task button{
+  .task .todo-button{
     background: #242424;
     border-radius: 50px;
     margin: 0px 3px;
@@ -24,8 +24,9 @@
     color: white;
     float: right;
     font-size: 10px;
+    height: 20px;
   }
-  .header {
+  .todo-header {
     margin: 0.5em;
     font-size: 1.5em;
     font-weight: bold;
@@ -37,8 +38,8 @@
   }
   .create-task input[type=text] {
     margin: 1em;
-    padding: 1em;
-    width: 80%;
+    padding: 0.7em;
+    width: 90%;
     outline: none;
     border-radius: 50px;
     border: 3px solid #242424;

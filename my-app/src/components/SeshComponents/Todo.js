@@ -9,8 +9,8 @@ import React, { useState } from 'react';
             style={{ textDecoration: task.completed ? "line-through" : "" }}
         >
             {task.title}
-            <button  onClick={() => removeTask(index)}>✘</button>
-            <button onClick={() => completeTask(index)}>✓</button>
+            <button className="todo-button" onClick={() => removeTask(index)}>✘</button>
+            <button className="todo-button" onClick={() => completeTask(index)}>✓</button>
         </div>
     );
 }
@@ -66,7 +66,7 @@ function Todo() {
     return ( 
         // the actual jsx thats returned/displayed for this component
         <div className="todo-container background-solid-white">
-            <div className="header">TODO</div>
+            <div className="todo-header">TODO</div>
             <div className="tasks">
                 {tasks.map((task, index) => (
                     <Task

@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.btn{
+.sesh-btn{
   background-color: #FFFFFF;
   border: none;
   border-radius: 100px;
@@ -19,12 +19,12 @@
   width: 200px;
   cursor: pointer;
 }
-.btn:hover{
+.sesh-btn:hover{
   color:#80D0C7;
   transform: scale(1.03);
   box-shadow: 0 0 0 0 #fff inset, #80D0C7 0 0 0 2px;
 }
-.btn:focus{
+.sesh-btn:focus{
   background: #fff;
   outline: 0;
   box-shadow: 0 0 0 0 #fff inset, #4b4b4b 0 0 0 3px;

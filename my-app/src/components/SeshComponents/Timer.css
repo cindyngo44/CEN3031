@@ -2,6 +2,7 @@
     border: 3px solid #242424;
     width: 200px;
     margin: 35px auto;
+    margin-top: 10px;
     border-radius: 25px;
   }
   .session-timer {
@@ -9,14 +10,14 @@
     color: #263646;
     font-weight: 400;
   }
-  .session-header {
+  #session-container .session-header {
     margin: -0.5em;
   }
-  .session-header h4{
+  #session-container .session-header .sesh-timer-header{
     font-family: 'GT Walsheim Pro';
     font-size: 1rem;
     color: #80D0C7;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
   #colon {
     position: relative;

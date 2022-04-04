@@ -9,6 +9,7 @@ class Register extends Component {
   constructor() {
     super();
 
+
     this.state = {
       name:'',
       phone:'',
