@@ -43,6 +43,9 @@ jobs:
       - run:
           name: Deploy to Netlify
           command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=build
+      - run:
+          name: Echo 
+          command: echo $NETLIFY_ACCESS_TOKEN
 workflows:
   build-deploy:
     jobs:
