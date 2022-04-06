@@ -16,7 +16,7 @@ jobs:
           command: "echo Hello, World!"
       - run:
           name: Echo 
-          command: echo $NETLIFY_ACCESS_TOKEN
+          command: "echo $NETLIFY_ACCESS_TOKEN"
   build:
     working_directory: ~/CEN3031/my-app
     docker:
