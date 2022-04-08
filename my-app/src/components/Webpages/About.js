@@ -11,9 +11,9 @@ export default function About() {
       <Navbar/>
     <div className="background-gradient" id="about">
       <div className="about-h1">About Us ඞ</div>
-      <div className="row background-solid-white">
+      <div className="about-row background-solid-white">
         {/* First Column */}
-        <div className="column">
+        <div className="about-column">
           <div className="about-h2">  Who are we? </div>
           <div className="about-p">
           Due to the consequences of the global pandemic that we are currently experiencing, we noticed that it is 
@@ -38,7 +38,7 @@ export default function About() {
           </div>
         </div>
         {/* Second Column */}
-        <div className="column spacing-top">
+        <div className="about-column spacing-top">
           <div className="about-h2">Let's talk about Sesh</div>
           <div className="about-p">
           Our project involves a study habit tracker which details the user’s daily activity and statistically computes 

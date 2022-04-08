@@ -106,7 +106,7 @@ class Timer extends React.Component {
       <section>
         <section id="session-container">
           <div className='session-header'>
-          <h4>{this.state.isSessionInterval ? 'Study Sesh' : 'Break'}</h4>
+          <div className="sesh-timer-header">{this.state.isSessionInterval ? 'Study Sesh' : 'Break'}</div>
           </div>
           <span
           className={timerClass}>

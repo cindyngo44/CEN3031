@@ -21,7 +21,7 @@ export default function Navbar() { {/* Navbar component */}
     
       <header className="nav-header">
         {/* Navbar Links: div must be contained in div:navbar in order for link to to work */}
-        <div className="navbar">
+        <div className="sesh-navbar">
           <div className="nav-links" id="navResponsive">
             <Link to="/" className="navbar-text">Home</Link>
             <Link to="/About" className="navbar-text">About Us</Link>
