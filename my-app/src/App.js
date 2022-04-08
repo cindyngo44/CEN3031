@@ -2,6 +2,7 @@ import './App.css';
 import About from  './components/Webpages/About';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './components/Webpages/Home';
+import Error from './components/Webpages/Error';
 import LoginNow from './components/Webpages/LoginNow';
 //import Register from './components/Webpages/Register';
 import Register from './components/Webpages/Register';
@@ -21,6 +22,7 @@ function App() {
         
       <Routes> {/* Routes contained  for router  */}
        <Route path="/" element={<Home />} /> 
+       <Route path="/*" element={<Error />} /> 
       <Route path="/About" element={<About/>} />
       <Route path="/Login" element={<LoginNow/>} />
       <Route path="/Register" element={<Register/>} />
