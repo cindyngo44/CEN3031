@@ -11,6 +11,7 @@ import MusicWidget from './components/SeshComponents/MusicWidget';
 import Sesh from './components/Webpages/Sesh';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Leaderboard from './components/Webpages/Leaderboard';
 library.add(faBars);
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path="/Sesh" element={<Sesh/>} />
       <Route path="/MusicWidget" element={<MusicWidget/>} />
       <Route path="/Profile" element={<Profile/>} />
+      <Route path="/Leaderboard" element={<Leaderboard/>} />
       </Routes>
 
     </Router>  

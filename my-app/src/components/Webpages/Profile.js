@@ -1,7 +1,7 @@
 import NavbarUser from '../Webpage-Components/Navbar-User';
 import '../Webpages/Profile.css';
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import Streak from "../pageComponents/Streak";
 
 export default class Profile extends Component {
   render() {
@@ -13,8 +13,9 @@ export default class Profile extends Component {
       <br/>
       <br/>
       <div className="profile">
-        <h1>Welcome, {localStorage.getItem("user")} !</h1>
+        <h1>Welcome, {localStorage.getItem("user")}!</h1>
       </div>
+      <Streak/>
       </div>
     )
   }
