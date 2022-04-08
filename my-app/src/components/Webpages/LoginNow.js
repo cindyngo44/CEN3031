@@ -1,54 +1,116 @@
 import '../Webpages/LoginNow.css';
-import React from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../Webpage-Components/Navbar';
-import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css"
+import axios from 'axios'
 
 
 
-export default function LoginNow() {
-    const [user, setUser] = useState({name: ""}); {/* Define react use states for handleing variables  */}
-    const [password, setPassword] = useState({password: ""});
-    const [logged, setLogged] = useState(false);
-    // const [error, setError] = useState("");
-  
-     function Login(){
-      console.log(user);
-      localStorage.setItem("user",user);
-      setLogged(validLogin);
-      if(validLogin() === false){
-        alert("Error either your username or password is incorrect");
-      }
-     } {/* Login for now just sets the useState user equal to the name inputed  from the details array in the Form component*/}
+class LoginNow extends Component {
+  constructor() {
+    super();
 
-    function validLogin(){
-      if(user === "admin" && password === "admin" ){
-          return true;
-      }
-      else{
-        return false;
-      }
-
-
+    this.state = {
+      username:'',
+      password:'',
+      //passwordTwo:'',
+      //age:''
 
     }
+
+      this.changeName = this.changeName.bind(this);
+      this.changePassword = this.changePassword.bind(this);
+      //this.changePasswordTwo = this.changePasswordTwo.bind(this);
+      //this.changeAge = this.changeAge.bind(this);
+      this.onSubmit= this.onSubmit.bind(this);
+     
+    
+}
+
+    changeName(event) {
+        this.setState({
+          username:event.target.value
+        })
+    
+      }
     
 
     
+      changePassword(event) {
+        this.setState({
+          password:event.target.value
+        })
+    
+      }
+
+      /*
+      changePasswordTwo(event) {
+        this.setState({
+          passwordTwo:event.target.value
+        })
+    
+      }
+
+      changeAge(event) {
+        this.setState({
+          age:event.target.value
+        })
+    
+      }
+      */
+    
+
+      onSubmit(event) {
+        event.preventDefault()
+
+        const loggedIn = {
+          username: this.state.username,
+          password:this.state.password,
+          //passwordTwo:this.state.passwordTwo,
+         // age:this.state.age
+        }
+
+        axios.post('http://localhost:4000/app/login', loggedIn)
+          .then(response => console.log(response.data))
+
+
+        // if we had a profile page to go to here is where we'd write window.location =/sesh
+
+        this.setState(
+          {
+            username:'',
+            password:'',
+            //passwordTwo:'',
+            //age:''
+          }
+        )
+    
+      }
+    
+
+    
+  
+    
+
+      render() {
     return (
       <div>
           <Navbar/>
         <div className="background-gradient" id="loginNow">
            <div className="wrapper">
       <div className="title">Login Form</div>
-      <form action="#">
+      <form onSubmit={this.onSubmit}>
         <div className="field">
-          <input type="text" required onChange={e => setUser(e.target.value)} />
+          <input type="text" required
+          onChange={this.changeName}
+          value = {this.state.username}/>
           <label>Username</label>
         </div>
         <div className="field">
-          <input type="password" required onChange={e => setPassword(e.target.value)}/>
+          <input type="password" required 
+          onChange={this.changePassword}
+          value = {this.state.password}/>
           <label>Password</label>
         </div>
         <div className="content">
@@ -59,14 +121,16 @@ export default function LoginNow() {
           <div className="pass-link"><a href="#">Forgot password?</a></div>
         </div>
         <div className="field">
-          <input type="submit" value="Login" onClick={Login}></input>
-        </div>
+    <input type="Submit" value="Login"></input>
+  </div>
         <div className="signup-link"><Link to="/Register">Not a member?</Link>
         </div>
       </form>
-      { logged ? (<Navigate replace to="/Profile" />) : null }
     </div>
             </div>
             </div>
     )
+      }
   }
+
+  export default LoginNow;

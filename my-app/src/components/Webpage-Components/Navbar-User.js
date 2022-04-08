@@ -15,7 +15,7 @@ function log(){
     
       <header className="nav-header">
         {/* Navbar Links: div must be contained in div:navbar in order for link to to work */}
-        <div className="navbar">
+        <div className="sesh-navbar">
           <div className="nav-links" id="navResponsive">
             <Link to="/Sesh" className="navbar-text">Sesh</Link>
             <Link to="/Profile" className="navbar-text">Profile</Link>
