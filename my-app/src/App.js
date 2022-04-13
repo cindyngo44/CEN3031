@@ -1,7 +1,10 @@
 import './App.css';
+
+import PrivateRoute from "./components/routing/PrivateRoute";
 import About from  './components/Webpages/About';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './components/Webpages/Home';
+//import Error from './components/Webpages/Error';
 import LoginNow from './components/Webpages/LoginNow';
 //import Register from './components/Webpages/Register';
 import Register from './components/Webpages/Register';
@@ -11,6 +14,8 @@ import MusicWidget from './components/SeshComponents/MusicWidget';
 import Sesh from './components/Webpages/Sesh';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Leaderboard from './components/Webpages/Leaderboard';
+import PrivateScreen from "./components/Webpages/PrivateScreen";
 library.add(faBars);
 
 function App() {
@@ -20,8 +25,9 @@ function App() {
         
       <Routes> {/* Routes contained  for router  */}
        <Route path="/" element={<Home />} /> 
+       <Route path="/Login" element={<LoginNow/>} />
+       <Route path="/About" element={<About/>} />
       <Route path="/About" element={<About/>} />
-      <Route path="/Login" element={<LoginNow/>} />
       <Route path="/Register" element={<Register/>} />
       <Route path="/Sesh" element={<Sesh/>} />
       <Route path="/MusicWidget" element={<MusicWidget/>} />

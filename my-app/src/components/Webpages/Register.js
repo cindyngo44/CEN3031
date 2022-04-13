@@ -1,155 +1,96 @@
 import React, { Component } from 'react';
+import { useState, useEffect } from "react";
 import './Register.css';
 import { Link } from 'react-router-dom';
 import Navbar from '../Webpage-Components/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css"
 import axios from 'axios'
 
-class Register extends Component {
-  constructor() {
-    super();
+const Register = ({history}) => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
 
 
-    this.state = {
-      name:'',
-      phone:'',
-      email:'',
-      password:'',
-      //passwordTwo:'',
-      //age:''
+  const registerHandler = async (e) => {
+    e.preventDefault();
 
+    const config = {
+      header: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    if (password !== confirmpassword) {
+      setPassword("");
+      setConfirmPassword("");
+      setTimeout(() => {
+        setError("");
+      }, 5000);
+      return setError("Passwords do not match");
     }
 
-      this.changeName = this.changeName.bind(this);
-      this.changePhone = this.changePhone.bind(this);
-      this.changeEmail = this.changeEmail.bind(this);
-      this.changePassword = this.changePassword.bind(this);
-      //this.changePasswordTwo = this.changePasswordTwo.bind(this);
-      //this.changeAge = this.changeAge.bind(this);
-      this.onSubmit= this.onSubmit.bind(this);
-     
-    
-}
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        {
+          username,
+          email,
+          password,
+        },
+        config
+      );
 
-    changeName(event) {
-        this.setState({
-          name:event.target.value
-        })
-    
-      }
-    
-    changePhone(event) {
-        this.setState({
-          phone:event.target.value
-        })
-    
-      }
+      localStorage.setItem("authToken", data.token);
+      alert('Registration successful')
+			window.location.href = '/Login'
 
-      changeEmail(event) {
-        this.setState({
-           email:event.target.value
-        })
-    
-      }
-    
-      changePassword(event) {
-        this.setState({
-          password:event.target.value
-        })
-    
-      }
-
-      /*
-      changePasswordTwo(event) {
-        this.setState({
-          passwordTwo:event.target.value
-        })
-    
-      }
-
-      changeAge(event) {
-        this.setState({
-          age:event.target.value
-        })
-    
-      }
-      */
-    
-
-      onSubmit(event) {
-        event.preventDefault()
-
-        const registered = {
-          name: this.state.name,
-          phone: this.state.phone,
-          email:this.state.email,
-          password:this.state.password,
-          //passwordTwo:this.state.passwordTwo,
-         // age:this.state.age
-        }
-
-        axios.post('http://localhost:4000/app/register', registered)
-          .then(response => console.log(response.data))
-
-
-        // if we had a profile page to go to here is where we'd write window.location =/sesh
-
-        this.setState(
-          {
-            name:'',
-            phone:'',
-            email:'',
-            password:'',
-            //passwordTwo:'',
-            //age:''
-          }
-        )
-    
-      }
-    
-
-    
-  
-
-  render() {
+      //history.push("/");
+    } catch (error) {
+      setError(error.response.data.error);
+      setTimeout(() => {
+        setError("");
+      }, 5000);
+    }
+  };
     return (
         <div>
         <Navbar/>
 <div className="background-gradient" id="registration">
 <div className="wrapper">
 <h2>Registration</h2>
-<form onSubmit={this.onSubmit}>
+<form onSubmit={registerHandler}>
+{error && <span className="error-message">{error}</span>}
+
   <div className="input-box">
     <input type="text" 
-    placeholder="Enter Your Name" required
-    onChange={this.changeName}
-    value = {this.state.name}
+    placeholder="Enter Username" required
+    value={username}
+    onChange={(e) => setUsername(e.target.value)}
     ></input>
   </div>
   <div className="input-box">
     <input type="text" 
     placeholder="Enter Your Email" required
-    onChange={this.changeEmail}
-    value = {this.state.email}
-    ></input>
-  </div>
-  <div className="input-box">
-    <input type="Phonenumber" 
-    placeholder="Phonenumber" required
-    onChange={this.changePhone}
-    value = {this.state.phone}
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
     ></input>
   </div>
   <div className="input-box">
     <input type="password" 
     placeholder="Create Password" required
-    onChange={this.changePassword}
-    value = {this.state.password}
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
     ></input>
   </div>
-  <div className="policy">
-    <input type="checkbox"></input>
-    <h3>I accept all terms and conditions</h3>
+  <div className="input-box">
+    <input type="password" 
+    placeholder="Confirm Password" required
+    value={confirmpassword}
+    onChange={(e) => setConfirmPassword(e.target.value)}
+    ></input>
   </div>
   <div className="input-box button">
     <input type="Submit" value="Register Now"></input>
@@ -164,6 +105,6 @@ class Register extends Component {
 </div>
     )
   }
-}
+
 
 export default Register;
