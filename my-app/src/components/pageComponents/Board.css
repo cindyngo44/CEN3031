@@ -1,0 +1,49 @@
+
+
+#main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.board {
+    text-align: center;
+}
+
+.leaderboard{
+    color: white;
+    font-size: 4em;
+}
+
+
+
+
+#profile .flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: left;
+    margin-top: 2em;
+    background-color: rgba(255, 255, 255, 0.438);
+
+}
+
+#profile .flex .item{
+    display: flex;
+    align-items: center;
+    font-size: large;
+}
+
+#profile .flex img{
+    border-radius: 50%;
+}
+
+#profile .flex .info{
+   padding: 1em;
+}
+
+
+.image{
+    height: 5em;
+    width: 5em
+}

@@ -2,6 +2,7 @@ import NavbarUser from '../Webpage-Components/Navbar-User';
 import '../Webpages/Profile.css';
 import React, { Component } from 'react';
 import Streak from "../pageComponents/Streak";
+import StudyTime from "../pageComponents/Study-Time";
 
 export default class Profile extends Component {
   render() {
@@ -16,6 +17,8 @@ export default class Profile extends Component {
         <h1>Welcome, {localStorage.getItem("user")}!</h1>
       </div>
       <Streak/>
+      <br/>
+      <StudyTime/>
       </div>
     )
   }

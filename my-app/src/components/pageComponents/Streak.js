@@ -86,11 +86,11 @@ export default function Streak() {
     <div className="streak-container background-solid-white">
         <div className="header">Habit Tracker</div>
         <div className = "streak-longest">
-            <h2>Longest Streak</h2>
+            <h2 className='streak-head'>Longest Streak</h2>
             <h2>{getLongStreak()}</h2>
         </div>
         <div className = "streak-current">
-            <h2>Current Streak</h2>
+            <h2 className='streak-head'>Current Streak</h2>
             <h2>{getCurStreak()}</h2>
         </div>
 
