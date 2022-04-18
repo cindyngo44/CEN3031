@@ -1,23 +1,35 @@
-
-import React from 'react'
+import React, { useState } from 'react'
+import Profiles from './Board-Profiles';
+import { Leaderboard } from './DB';
+import "./Board.css";
 
 export default function Board() {
 
-const handleClick = (e) =>{
-    
-}
+    const [period, setPeriod] = useState(0);
 
+  const handleClick = (e) => {
+     
+    setPeriod(e.target.dataset.id)
+  }
 
   return (
-    <div>
-        <h1>Leaderboard</h1>
+    <div className="board">
+        <h1 className='leaderboard'>Leaderboard</h1>
 
-        <div>
-            <button data-id='7' onClick={handleClick}>7 Days</button>
-            <button data-id='30' onClick={handleClick}>30 Days</button>
-            <button data-id='0' onClick={handleClick}>All Time</button>
-        </div>
+
+        <Profiles Leaderboard={between(Leaderboard)}></Profiles>
 
     </div>
   )
+}
+function between(data){
+   
+    // sort with asending order
+    return data.sort((a, b) => {
+        if ( a.score === b.score){
+            return b.score - a.score;
+        } else{
+            return b.score - a.score;
+        }
+    })
 }
