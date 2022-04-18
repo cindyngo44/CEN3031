@@ -22,9 +22,6 @@ export default function Board() {
     </div>
   )
 }
-
-
-
 function between(data){
    
     // sort with asending order
@@ -35,5 +32,4 @@ function between(data){
             return b.score - a.score;
         }
     })
-
 }
