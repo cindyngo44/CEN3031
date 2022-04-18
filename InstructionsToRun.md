@@ -17,5 +17,10 @@ Run the command "npm install" in the terminal to install the required dependenci
 ## Run the application
 Run the command "npm start" in the terminal to open the application on your localhost:3000.
 
+## Run backend
+Open a new terminal and cd into my-app/signupbackend using "cd my-app/signupbackend" and run the command "npm start".
+
+## Thats it the application should be running in your browser!
+
 ## Website
 Our website is deployed using Netlify and can be accessed [here](https://glittery-bienenstitch-06fdd7.netlify.app/)
