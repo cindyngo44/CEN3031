@@ -27,24 +27,8 @@ const Login= ({ history }) => {
         config
       );
 
-      localStorage.clear();
-
-      localStorage.setItem("authToken", data.token);
-      localStorage.setItem("username", data.username);
-      localStorage.setItem("email", data.email);
-      localStorage.setItem("studiedTime", data.studiedTime);
-      localStorage.setItem("seshStreak", data.seshStreak);
-
-
-      console.log(data);
-      console.log(data.username);
-      
-
-      console.log(localStorage.getItem("authToken"));
-      console.log(localStorage.getItem("username"));
-      console.log(localStorage.getItem("email"));
-      console.log(localStorage.getItem("studiedTime"));
-      console.log(localStorage.getItem("seshStreak"));
+      localStorage.setItem("auth-token", data.token);
+      console.log(localStorage.getItem("auth-token"));
 
       alert('Login successful')
 			window.location.href = '/Sesh'
