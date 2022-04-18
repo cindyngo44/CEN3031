@@ -1,116 +1,79 @@
+
 import '../Webpages/LoginNow.css';
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navbar from '../Webpage-Components/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css"
 import axios from 'axios'
 
+const Login= ({ history }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const loginHandler = async (e) => {
+    e.preventDefault();
+
+    const config = {
+      header: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        { email, password },
+        config
+      );
+
+      localStorage.clear();
+
+      localStorage.setItem("authToken", data.token);
+      localStorage.setItem("username", data.username);
+      localStorage.setItem("email", data.email);
+      localStorage.setItem("studiedTime", data.studiedTime);
+      localStorage.setItem("seshStreak", data.seshStreak);
 
 
-class LoginNow extends Component {
-  constructor() {
-    super();
+      console.log(data);
+      console.log(data.username);
+      
 
-    this.state = {
-      username:'',
-      password:'',
-      //passwordTwo:'',
-      //age:''
+      console.log(localStorage.getItem("authToken"));
+      console.log(localStorage.getItem("username"));
+      console.log(localStorage.getItem("email"));
+      console.log(localStorage.getItem("studiedTime"));
+      console.log(localStorage.getItem("seshStreak"));
 
+      alert('Login successful')
+			window.location.href = '/Sesh'
+    } catch (error) {
+      alert('Login unsuccessful')
+      window.location.href ='/'
+      setError(error.response.data.error);
+      setTimeout(() => {
+        setError("");
+      }, 5000);
     }
-
-      this.changeName = this.changeName.bind(this);
-      this.changePassword = this.changePassword.bind(this);
-      //this.changePasswordTwo = this.changePasswordTwo.bind(this);
-      //this.changeAge = this.changeAge.bind(this);
-      this.onSubmit= this.onSubmit.bind(this);
-     
-    
-}
-
-    changeName(event) {
-        this.setState({
-          username:event.target.value
-        })
-    
-      }
-    
-
-    
-      changePassword(event) {
-        this.setState({
-          password:event.target.value
-        })
-    
-      }
-
-      /*
-      changePasswordTwo(event) {
-        this.setState({
-          passwordTwo:event.target.value
-        })
-    
-      }
-
-      changeAge(event) {
-        this.setState({
-          age:event.target.value
-        })
-    
-      }
-      */
-    
-
-      onSubmit(event) {
-        event.preventDefault()
-
-        const loggedIn = {
-          username: this.state.username,
-          password:this.state.password,
-          //passwordTwo:this.state.passwordTwo,
-         // age:this.state.age
-        }
-
-        axios.post('http://localhost:4000/app/login', loggedIn)
-          .then(response => console.log(response.data))
-
-
-        // if we had a profile page to go to here is where we'd write window.location =/sesh
-
-        this.setState(
-          {
-            username:'',
-            password:'',
-            //passwordTwo:'',
-            //age:''
-          }
-        )
-    
-      }
-    
-
-    
-  
-    
-
-      render() {
+  };
     return (
       <div>
           <Navbar/>
         <div className="background-gradient" id="loginNow">
            <div className="wrapper">
       <div className="title">Login Form</div>
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={loginHandler}>
         <div className="field">
           <input type="text" required
-          onChange={this.changeName}
-          value = {this.state.username}/>
-          <label>Username</label>
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}/>
+          <label>Email</label>
         </div>
         <div className="field">
           <input type="password" required 
-          onChange={this.changePassword}
-          value = {this.state.password}/>
+          value={password}
+					onChange={(e) => setPassword(e.target.value)}/>
           <label>Password</label>
         </div>
         <div className="content">
@@ -118,7 +81,7 @@ class LoginNow extends Component {
             <input type="checkbox" id="remember-me"></input>
             <label for="remember-me">Remember me</label>
           </div>
-          <div className="pass-link"><a href="#">Forgot password?</a></div>
+          <div className="pass-link"><Link to="/ForgotPassword">Forgot password?</Link></div>
         </div>
         <div className="field">
     <input type="Submit" value="Login"></input>
@@ -130,7 +93,7 @@ class LoginNow extends Component {
             </div>
             </div>
     )
-      }
+     
   }
 
-  export default LoginNow;
+  export default Login;

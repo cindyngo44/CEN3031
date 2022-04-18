@@ -5,4 +5,3 @@ export default function Profiles() {
     <div>Board-Profiles</div>
   )
 }
-
