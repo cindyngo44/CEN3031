@@ -19,10 +19,43 @@ export const UserContext = createContext()
 library.add(faBars);
 
 function App() {
+
+  const [userData, setUserData] = useState({
+    token: undefined,
+    user: undefined,
+  })
+
+  useEffect(() => {
+    const isLoggedIn = async () => {
+      let token = localStorage.getItem("auth-token")
+      if (token == null){
+        localStorage.setItem("auth-token", "")
+        token = ""
+      }
+
+      const tokenResponse = await axios.post(
+        'http://localhost:5000/api/auth/tokenIsValid', 
+        null, 
+        {headers: {"auth-token": token}}
+      )
+
+      console.log(tokenResponse.data)
+      if(tokenResponse.data){
+        const userResponse = await axios.get('http://localhost:5000/api/auth/profile',
+          {headers: {'auth-token': token}}
+        )
+        setUserData({
+          token: token,
+          user: userResponse.data
+        })
+      }
+    }
+    isLoggedIn()
+  }, [])
   
   return (
     <div> 
-     
+     <UserContext.Provider value={{ userData, setUserData }}>
       <Router> {/* Router lets page render different components based on address path */}
         
       <Routes> {/* Routes contained  for router  */}
@@ -41,8 +74,9 @@ function App() {
 
     </Router>  
    
-    
+    </UserContext.Provider>
     </div>
+
    );
 }
 
