@@ -96,7 +96,7 @@ export default function Streak() {
 
         <div className="streak-past-five">
             
-            <h2>Past Five Days</h2>
+            <h2 className="streak-h2">Past Five Days</h2>
             
             <div> 
             <div  className='streak-days'>
