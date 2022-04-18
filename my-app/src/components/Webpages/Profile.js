@@ -24,21 +24,25 @@ const Profile = () => {
   // localStorage.setItem("email", data.email);
     return (
       <div className="background-gradient">
-      <NavbarUser/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <div className="profile">
+        <NavbarUser/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div className="profile">
         {/* <h1>User Profile</h1>
         <h4><b>User ID:</b></h4><br/>
         <h4><b>Username:</b></h4><br/> */}
-      </div>
-      <Streak/>
-      <br/>
-      <StudyTime/>
-      <br/>
-      <UserInfo/>
+        </div>
+        <div className="flex">
+          <UserInfo/>
+          <div className="flex column-flex">
+            <Streak/>
+            <br/>
+            <StudyTime/>
+          </div>
+          <UserInfo/> {/* Placeholder */}
+        </div>
       </div>
     )
   }

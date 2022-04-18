@@ -6,8 +6,8 @@ export default function UserInformation() {
         <div className="header">Profile</div>
         <div className = "user-total">
             <img src={getImageSrc()} className="user-image"></img>
-            <h1 className='user-string'> Username: {getUsername()} </h1>
-            <h1 className='user-string'> Email: {getEmail()} </h1>
+            <h1 className='user-string'><b>Username: </b>{getUsername()} </h1>
+            <h1 className='user-string'><b>Email: </b>{getEmail()} </h1>
             
          
             </div>
