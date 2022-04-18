@@ -24,7 +24,6 @@ const Profile = () => {
         <h4><b>Studied Time:{userData.user.studiedTime}</b></h4><br/>
         <h4><b>Sesh Streak:{userData.user.seshStreak}</b></h4><br/>
       </div>
-      <Streak/>
       </div>
     )
   }
