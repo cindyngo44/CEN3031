@@ -82,7 +82,7 @@ exports.forgotPassword = async (req, res, next) => {
     await user.save();
 
     // Create reset url to email to provided email
-    const resetUrl = `http://localhost:3000/ResetPassword/${resetToken}`;
+    const resetUrl = `http://localhost:5000/api/auth/resetpassword/${resetToken}`;
 
     // HTML Message
     const message = `
@@ -113,7 +113,6 @@ exports.forgotPassword = async (req, res, next) => {
     next(err);
   }
 };
-
 
 // @desc    Reset User Password
 exports.resetPassword = async (req, res, next) => {

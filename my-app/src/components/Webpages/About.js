@@ -49,12 +49,9 @@ export default function About() {
           <h2 className="about-h2 spacing-top"> What features can you expect to find?</h2>
           <ul className="about-li"> {/* Unordered list */}
             <li>Calendar streaks </li>
-            <li>Pie Chart</li> 
             <li>User Profile</li>
             <li>Leaderboards</li>
             <li>Study Seshs with timers, todolists, resource lists and more!</li>
-            <li>Personalized Teacher Edition</li>
-            <li>Personalized Parent Edition </li>
           </ul>
         </div>
       </div>
