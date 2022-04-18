@@ -47,7 +47,7 @@ const Register = ({history}) => {
       alert('Registration successful')
 			window.location.href = '/Login'
 
-      //history.push("/");
+      history.push("/");
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {

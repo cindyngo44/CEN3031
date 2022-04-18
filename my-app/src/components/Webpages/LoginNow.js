@@ -27,7 +27,24 @@ const Login= ({ history }) => {
         config
       );
 
+      localStorage.clear();
+
       localStorage.setItem("authToken", data.token);
+      localStorage.setItem("username", data.username);
+      localStorage.setItem("email", data.email);
+      localStorage.setItem("studiedTime", data.studiedTime);
+      localStorage.setItem("seshStreak", data.seshStreak);
+
+
+      console.log(data);
+      console.log(data.username);
+      
+
+      console.log(localStorage.getItem("authToken"));
+      console.log(localStorage.getItem("username"));
+      console.log(localStorage.getItem("email"));
+      console.log(localStorage.getItem("studiedTime"));
+      console.log(localStorage.getItem("seshStreak"));
 
       alert('Login successful')
 			window.location.href = '/Sesh'
@@ -64,7 +81,7 @@ const Login= ({ history }) => {
             <input type="checkbox" id="remember-me"></input>
             <label for="remember-me">Remember me</label>
           </div>
-          <div className="pass-link"><a href="#">Forgot password?</a></div>
+          <div className="pass-link"><Link to="/ForgotPassword">Forgot password?</Link></div>
         </div>
         <div className="field">
     <input type="Submit" value="Login"></input>

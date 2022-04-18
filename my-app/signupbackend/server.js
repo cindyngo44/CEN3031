@@ -22,8 +22,6 @@ app.use(cors())
 
 // Connecting Routes
 app.use('/api/auth', require('./routes/auth'));
-app.use("/api/private", require("./routes/private"));
-
 // Error Handler Middleware
 app.use(errorHandler);
 

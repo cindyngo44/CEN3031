@@ -2,6 +2,8 @@ const crypto = require("crypto");
 const ErrorResponse = require("../utils/errorResponse");
 const User = require("../models/User");
 const sendEmail = require("../utils/sendEmail");
+const auth = require("../middleware/auth");
+const jwt = require('jsonwebtoken')
 
 // @desc    Login user
 exports.login = async (req, res, next) => {
@@ -27,6 +29,16 @@ exports.login = async (req, res, next) => {
       return next(new ErrorResponse("Invalid credentials", 401));
     }
 
+    const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
+      res.json({
+        token: token,
+        user: {
+          id: user._id,
+          username: user.username,
+          //date: user.date,
+        },
+      });
+
     sendToken(user, 200, res);
   } catch (err) {
     next(err);
@@ -41,14 +53,16 @@ exports.register = async (req, res, next) => {
     const user = await User.create({
       username,
       email,
-      password,
-    });
+      password
+        });
 
     sendToken(user, 200, res);
   } catch (err) {
     next(err);
   }
 };
+
+
 
 // @desc    Forgot Password Initialization
 exports.forgotPassword = async (req, res, next) => {
@@ -68,7 +82,7 @@ exports.forgotPassword = async (req, res, next) => {
     await user.save();
 
     // Create reset url to email to provided email
-    const resetUrl = `http://localhost:3000/passwordreset/${resetToken}`;
+    const resetUrl = `http://localhost:3000/ResetPassword/${resetToken}`;
 
     // HTML Message
     const message = `
@@ -136,7 +150,61 @@ exports.resetPassword = async (req, res, next) => {
 };
 
 
+
+exports.profile = async (req, res) => {
+  const token = req.header("auth-token");
+  if (!token) {
+    return res.json("false not good token");
+  }
+
+  const verified = jwt.verify(token, process.env.JWT_SECRET);
+  if (!verified) {
+    return res.json("false not verified token");
+  }
+
+  const user = await User.findById(verified._id);
+  if (!user) {
+    return res.json("false no id found");
+  }
+
+  res.json({
+    id: user._id,
+    username: user.username,
+    date: user.date,
+  });
+
+   
+  };
+
+  
+
+
+
 const sendToken = (user, statusCode, res) => {
   const token = user.getSignedJwtToken();
   res.status(statusCode).json({ sucess: true, token });
+};
+
+
+exports.tokenIsValid= async (req, res) => {
+  try {
+    const token = req.header("auth-token");
+    if (!token) {
+      return res.json("false");
+    }
+
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
+    if (!verified) {
+      return res.json("false");
+    }
+
+    const user = await User.findById(verified._id);
+    if (!user) {
+      return res.json("false");
+    }
+
+    return res.json(true);
+  } catch {
+    res.status(500).json({ msg: err.message });
+  }
 };

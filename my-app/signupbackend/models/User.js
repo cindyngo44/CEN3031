@@ -23,6 +23,18 @@ const UserSchema = new mongoose.Schema({
     minlength: 6,
     select: false,
   },
+  studiedTime: {
+    type: Number,
+    default: 0
+  },
+  seshStreak: {
+    type: Number,
+    default: 0
+  },
+  date: {
+    type: Date,
+    default: Date.now
+},
   resetPasswordToken: String,
   resetPasswordExpire: Date,
 });
