@@ -39,7 +39,7 @@ exports.login = async (req, res, next) => {
         },
       });
 
-    sendToken(user, 200, res);
+    //sendToken(user, 200, res);
   } catch (err) {
     next(err);
   }
@@ -152,25 +152,15 @@ exports.resetPassword = async (req, res, next) => {
 
 
 exports.profile = async (req, res) => {
-  const token = req.header("auth-token");
-  if (!token) {
-    return res.json("false not good token");
-  }
-
-  const verified = jwt.verify(token, process.env.JWT_SECRET);
-  if (!verified) {
-    return res.json("false not verified token");
-  }
-
-  const user = await User.findById(verified._id);
-  if (!user) {
-    return res.json("false no id found");
-  }
-
+  const user = await User.findById(req.user._id);
   res.json({
     id: user._id,
     username: user.username,
-    date: user.date,
+    email: user.email,
+    studiedTime: user.studiedTime,
+    seshStreak: user.seshStreak,
+    pic:user.pic,
+
   });
 
    

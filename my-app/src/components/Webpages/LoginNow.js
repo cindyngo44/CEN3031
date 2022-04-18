@@ -24,27 +24,15 @@ const Login= ({ history }) => {
       const { data } = await axios.post(
         "http://localhost:5000/api/auth/login",
         { email, password },
+
         config
       );
 
-      localStorage.clear();
+      localStorage.setItem("auth-token", data.token);
 
-      localStorage.setItem("authToken", data.token);
-      localStorage.setItem("username", data.username);
-      localStorage.setItem("email", data.email);
-      localStorage.setItem("studiedTime", data.studiedTime);
-      localStorage.setItem("seshStreak", data.seshStreak);
-
-
-      console.log(data);
-      console.log(data.username);
-      
-
-      console.log(localStorage.getItem("authToken"));
-      console.log(localStorage.getItem("username"));
-      console.log(localStorage.getItem("email"));
-      console.log(localStorage.getItem("studiedTime"));
-      console.log(localStorage.getItem("seshStreak"));
+      localStorage.setItem("email", email);
+    
+      console.log(localStorage.getItem("auth-token"));
 
       alert('Login successful')
 			window.location.href = '/Sesh'

@@ -1,32 +1,14 @@
 import NavbarUser from '../Webpage-Components/Navbar-User';
 import '../Webpages/Profile.css';
 import React, { useContext, useState, useEffect } from "react";
+import { UserContext } from "../../App";
 import axios from 'axios'
 
 const Profile = () => {
-  
-  //const [username, setName] = useState("");
-  //const [email, setEmail] = useState("");
 
- let token = localStorage.getItem("authToken");
- console.log(token);
-
-  
-  const { data } = axios.get(
-    "http://localhost:5000/api/auth/profile",
-    {
-      params: {
-        token : token
-      }
-    }
-  );
-  console.log(data);
-
-  localStorage.setItem("username", data.username);
-  localStorage.setItem("email", data.email);
+  const { userData, setUserData } = useContext(UserContext);
 
 
- 
 
   
     return (
@@ -38,8 +20,11 @@ const Profile = () => {
       <br/>
       <div className="profile">
         <h1>User Profile</h1>
-        <h4><b>User ID:</b></h4><br/>
-        <h4><b>Username:</b></h4><br/>
+        <h4><b>User ID:{userData.user.id}</b></h4><br/>
+        <h4><b>Username:{userData.user.username}</b></h4><br/>
+        <h4><b>Email:{userData.user.email}</b></h4><br/>
+        <h4><b>Studied Time:{userData.user.studiedTime}</b></h4><br/>
+        <h4><b>Sesh Streak:{userData.user.seshStreak}</b></h4><br/>
       </div>
       </div>
       
