@@ -1,21 +1,18 @@
 #break-interval-container {
-    width: 200px;
-    text-align: center;
-    margin-top: 15px;
+  width: 200px;
+  text-align: center;
+  margin-top: 15px;
 }
-
 #break-time-interval {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .break-time {
   margin: 0 15px;
   font-size: 1.5rem;
   font-weight: 500;
 }
-
 .sesh-title h4 {
   font-family: 'GT Walsheim Pro';
   font-size: 1rem;

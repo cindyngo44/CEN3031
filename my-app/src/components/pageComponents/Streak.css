@@ -1,69 +1,70 @@
 .streak-container {
-    width: 600px;
-    height: 300px;
-    border-radius: 25px;
-    padding: 20px 10px;
-    color: #242424;
-    margin-inline:auto;
-  }
-  
- .select {
-    border: 2px solid #242424;
-    width: 80%;
-    padding: 1em;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 25px;
- }
-  .header {
-    margin: 0.5em;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 15px 15px 0 0;
-    line-height: 50px;
-    color: white;
-    background: linear-gradient(-135deg, #80D0C7, #7DD48E);
-  }
-
-  .streak-current{
-    float:left;
-    margin-inline: 10%;
-    width: 30%;
-    text-align: center;
-    border:2px solid #242424;
-    border-radius: 10px;
-    color:#242424;
-  }
-  .streak-longest{
-    float:left;
-    margin-inline: 10%;
-    width: 30%;
-    text-align: center;
-    border:2px solid #242424;
-    border-radius: 10px;
-    color:#242424;
+  width: 600px;
+  height: 350px;
+  border-radius: 25px;
+  padding: 20px 10px;
+  color: #242424;
+  margin-inline:auto;
 }
-
+.select {
+  width: 80%;
+  padding: 1em;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+}
+.header {
+  margin: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  line-height: 50px;
+  color: white;
+  background: linear-gradient(-135deg, #80D0C7, #7DD48E);
+}
+.streak-h2{
+  margin-bottom: -5px;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  line-height: 50px;
+  color: #7DD48E;
+}
+.streak-current{
+  float:left;
+  margin-inline: 10%;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  color:#242424;
+}
+.streak-longest{
+  float:left;
+  margin-inline: 10%;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  color:#242424;
+}
 .streak-logo{
-    height:60px;
-    margin-right:20px;
-    margin-left:20px;
+  height:60px;
+  margin-right:20px;
+  margin-left:20px;
 }
-
 .streak-past-five{
-    text-align: center;
+  text-align: center;
+  margin-top: 120px;
 }
-
 .streak-days{
-    margin: auto;
-    width: 70%;
-    background-color: #242424;
-    border-radius: 20px;
-    padding-top:5px;
+  margin: auto;
+  width: 70%;
+  background-color: #242424;
+  border-radius: 20px;
+  padding: 10px;
 }
 .streak-head{
-    color:#7DD48E;
-    font-size: 1.25rem;
+  color:#7DD48E;
+  font-size: 1.25rem;
 }
