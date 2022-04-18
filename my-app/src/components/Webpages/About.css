@@ -65,7 +65,6 @@
 .btn-github-style:hover{
   background-color: #7DD48E;
 }
-/* Mobile responsiveness */
 @media screen and (max-width: 600px) {
   .column {
       width: 100%;

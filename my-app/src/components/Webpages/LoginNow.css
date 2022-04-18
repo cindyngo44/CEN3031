@@ -1,17 +1,14 @@
 #loginNow{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color:#7DD48E;
-    font-family: 'GT Walsheim Pro', sans-serif;
-
-    /* Centering the body */
-
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color:#7DD48E;
+  font-family: 'GT Walsheim Pro', sans-serif;
 }
 .wrapper{
   width: 380px;
@@ -48,8 +45,7 @@
   border-radius: 25px;
   transition: all 0.3s ease;
 }
-.wrapper form .field input:focus,
-form .field input:valid{
+.wrapper form .field input:focus, form .field input:valid{
   border-color: #80D0C7;
 }
 .wrapper form .field label{
@@ -63,8 +59,7 @@ form .field input:valid{
   transform: translateY(-50%);
   transition: all 0.3s ease;
 }
-form .field input:focus ~ label,
-form .field input:valid ~ label{
+form .field input:focus ~ label, form .field input:valid ~ label{
   top: 0%;
   font-size: 16px;
   color: #7DD48E;
@@ -116,12 +111,10 @@ form .signup-link{
   margin-top: 20px;
   text-align: center;
 }
-form .pass-link a,
-form .signup-link a{
+form .pass-link a, form .signup-link a{
   color: #7DD48E;
   text-decoration: none;
 }
-form .pass-link a:hover,
-form .signup-link a:hover{
+form .pass-link a:hover, form .signup-link a:hover{
   text-decoration: underline;
 }

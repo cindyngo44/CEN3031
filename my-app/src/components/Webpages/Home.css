@@ -10,12 +10,11 @@
   font-family: 'GT Walsheim Pro', sans-serif;
 }
 #home-h1{
-    font-size: 100px;
-    font-weight: bold;
-    margin: 10px;
-  }
+  font-size: 100px;
+  font-weight: bold;
+  margin: 10px;
+}
 #home-p{
-    font-size: 30px;
-    margin: 25px;
-  }
-  /* comment test*/
+  font-size: 30px;
+  margin: 25px;
+}
