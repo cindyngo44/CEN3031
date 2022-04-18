@@ -6,12 +6,15 @@ import MusicWidget from '../SeshComponents/MusicWidget';
 import NavbarUser from '../Webpage-Components/Navbar-User';
 import Resources from '../SeshComponents/Resources';
 import DefaultTimer from '../SeshComponents/DefaultTimer';
+import backgroundVideo from '../../images/CorgiBackground.mp4';
 
 export default function Sesh() {
   return (
     <div>
       <NavbarUser/>
-      <div className="background-gradient"> 
+      <video className="background-video" autoPlay loop muted id='video'>
+        <source src={backgroundVideo} type='video/mp4'/>
+      </video>
       <div className="outer-container">
         <div className="flex-container">
             <DefaultTimer/>
@@ -25,7 +28,6 @@ export default function Sesh() {
           </div>
         </div>
       </div>
-    </div>
   )
 }
 

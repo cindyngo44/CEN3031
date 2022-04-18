@@ -24,6 +24,9 @@
   z-index: 3;
   background: rgba(191,236,180,255);
 }
+.navbar-text:hover{
+  color: #80D0C7;
+}
 .sesh-logo {
   position: absolute;
   left: 2.33%;
