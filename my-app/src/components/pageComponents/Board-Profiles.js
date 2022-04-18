@@ -37,11 +37,11 @@ function Item(data){
                             <img src={value.img} alt="" className='image' />
             
                             <div className="info">
-                                <h3 className='name text-dark'>{value.name}</h3>    
+                                <h3 className='name leaderboard-name'>{value.name}</h3>    
                             </div>                
                         </div>
                         <div className="item">
-                            <span>{"Total Study Time: "+Time(value.score)}</span>
+                            <span><b>Total Study Time: </b>{Time(value.score)}</span>
                         </div>
                     </div>
                     )
