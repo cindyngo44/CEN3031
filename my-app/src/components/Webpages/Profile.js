@@ -4,6 +4,8 @@ import React, {useState, useEffect, Component } from "react";
 import Streak from "../pageComponents/Streak";
 import StudyTime from "../pageComponents/Study-Time";
 import UserInfo from "../pageComponents/User-Information";
+import Inspiration from "../pageComponents/Inspiration";
+
 import axios from 'axios'
 
 const Profile = () => {
@@ -23,9 +25,9 @@ const Profile = () => {
             <br/>
             <StudyTime/>
           </div>
+          <Inspiration/>
         </div>
       </div>
     )
   }
   export default Profile
-
