@@ -10,7 +10,7 @@ export default function UserInformation() {
     }
     function getEmail(){
     
-        let email = userData.user.email;
+        let email =  userData.user.email;
         return(email);
         }
     function getImageSrc(){
