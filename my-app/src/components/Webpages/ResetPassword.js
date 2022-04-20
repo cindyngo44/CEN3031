@@ -19,6 +19,7 @@ const ResetPassword = ({ history, match }) => {
         "Content-Type": "application/json",
       },
     };
+    /*
 
     if (password !== confirmPassword) {
       setPassword("");
@@ -28,10 +29,11 @@ const ResetPassword = ({ history, match }) => {
       }, 5000);
       return setError("Passwords don't match");
     }
+    */
 
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/api/auth/ResetPassword/${match.params.resetToken}`,
+        `http://localhost:5000/api/auth/resetpassword/${match.params.resetToken}`,
         {
           password,
         },
@@ -40,11 +42,13 @@ const ResetPassword = ({ history, match }) => {
 
       console.log(data);
       setSuccess(data.data);
+      alert('successful')
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {
         setError("");
       }, 5000);
+      alert('unsuccessful')
     }
   };
 
@@ -55,13 +59,9 @@ const ResetPassword = ({ history, match }) => {
         onSubmit={resetPasswordHandler}
         className="resetpassword-screenform"
       >
-        <h3 className="resetpassword-screentitle">Forgot Password</h3>
-        {error && <span className="error-message">{error} </span>}
-        {success && (
-          <span className="success-message">
-            {success} <Link to="/login">Login</Link>
-          </span>
-        )}
+        <h3 className="resetpassword-screentitle">Reset Password</h3>
+        {error && <span className="error-message">{error}</span>}
+        {success && <span className="success-message">{success}</span>}
         <div className="form-group">
           <label htmlFor="password">New Password:&nbsp;&nbsp;</label>
           <input

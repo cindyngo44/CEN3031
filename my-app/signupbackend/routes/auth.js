@@ -15,6 +15,7 @@ router.post('/forgotpassword', AuthController.forgotPassword)
 router.put("/resetpassword/:resetToken", AuthController.resetPassword)
 router.get('/profile', auth, AuthController.profile)
 router.post('/tokenIsValid', AuthController.tokenIsValid)
+//changed /env
 
 
 module.exports = router
