@@ -7,7 +7,7 @@ export default function StudyTime() {
 
     function getStudyTime(){
 
-        let time = 2012;
+        let time = 1250;
         return time;
     }
 
