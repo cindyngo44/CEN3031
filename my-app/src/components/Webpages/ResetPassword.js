@@ -19,7 +19,7 @@ const ResetPassword = ({ history, match }) => {
         "Content-Type": "application/json",
       },
     };
-    /*
+    
 
     if (password !== confirmPassword) {
       setPassword("");
@@ -29,7 +29,7 @@ const ResetPassword = ({ history, match }) => {
       }, 5000);
       return setError("Passwords don't match");
     }
-    */
+    
 
     try {
       const { data } = await axios.put(
