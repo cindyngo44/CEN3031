@@ -1,9 +1,8 @@
-POST http://localhost:5000/api/auth/login
+POST http://localhost:5000/api/auth/profile
 Content-Type:application/json
 
 {
-   "email": "nkallamvalli11@gmail.com",
-   "password": "cen3031"
+   "email": "nkallamvalli11@gmail.com"
 
 }
 
@@ -19,3 +18,24 @@ auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjU1ZGQ0ZDNkZWU3MzBh
 ###
 
 POST http://localhost:5000/api/auth/tokenIsValid
+
+
+###
+POST http://localhost:5000/api/auth/forgotpassword
+Content-Type:application/json
+
+{
+   "email": "nkallamvalli11@gmail.com"
+
+}
+
+###
+PUT http://localhost:5000/api/auth/resetpassword/cfb57beef0f97a23a8cee994dc1087a61008bba6
+Content-Type:application/json
+
+{
+   "password": "CEN3031"
+}
+
+
+
