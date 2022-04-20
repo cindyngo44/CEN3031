@@ -28,9 +28,6 @@ Run the command "npm install" in the terminal to install the required dependenci
 ## Run the application
 Run the command "npm start" in the terminal to get the backend on your localhost:5000. This will enable login authentication and allow access to the Sesh page and other features provided in our application. 
 
-## Run backend
-Open a new terminal and cd into my-app/signupbackend using "cd my-app/signupbackend" and run the command "npm start".
-
 ## Thats it the application should be running in your browser!
 
 ## Website
